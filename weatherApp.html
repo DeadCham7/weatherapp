@@ -7,26 +7,64 @@ Also requires files:
 -->
 
 <html>
-<head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width"> 
-	<title>Weather App</title>
-	<script src="weather.js"></script>
-	<!-- <link rel="stylesheet" type="text/css" href="reset.css"> -->
-	<!-- <link rel="stylesheet" type="text/css" href="weather.css"></link> -->
-</head>
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width">
+		<title>Weather App</title>
+		<script src="weather.js"></script>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+	</head>
 
-<body>
+	<body>
+		<div id="topPortion">
+			<h1 id="location"></h1>
+			<div id="zip">
+		</div>
+			<input id="zipInput" type="text" placeholder="enter zip">
+			<button onclick="zipAction()"></button>
+		</div>
+		<div id="weatherBox">
+			<div id="range">
 
-<div id="weatherBox">
-<p id="forecast"></p>
-</div>
+					<div class="forecastBox">
+						<div id="forecast0" class="forecast"><p id="date0"></p>  <span id="text0"></span><br><span id="high0"></span><br><span id="low0"></span><br></div>
+						<div id="forecast1" class="forecast"><p id="date1"></p>  <span id="text1"></span><br><span id="high1"></span><br><span id="low1"></span><br></div>
+						<div id="forecast2" class="forecast"><p id="date2"></p>  <span id="text2"></span><br><span id="high2"></span><br><span id="low2"></span><br></div>
+						<div id="forecast3" class="forecast"><p id="date3"></p>  <span id="text3"></span><br><span id="high3"></span><br><span id="low3"></span><br></div>
+						<div id="forecast4" class="forecast"><p id="date4"></p>  <span id="text4"></span><br><span id="high4"></span><br><span id="low4"></span><br></div>
+						<div id="forecast5" class="forecast"><p id="date5"></p>  <span id="text5"></span><br><span id="high5"></span><br><span id="low5"></span><br></div>
+						<div id="forecast6" class="forecast"><p id="date6"></p>  <span id="text6"></span><br><span id="high6"></span><br><span id="low6"></span><br></div>
+						<div id="forecast7" class="forecast"><p id="date7"></p>  <span id="text7"></span><br><span id="high7"></span><br><span id="low7"></span><br></div>
+						<div id="forecast8" class="forecast"><p id="date8"></p>  <span id="text8"></span><br><span id="high8"></span><br><span id="low8"></span><br></div>
+						<div id="forecast9" class="forecast"><p id="date9"></p>  <span id="text9"></span><br><span id="high9"></span><br><span id="low9"></span><br></div>
 
-<!-- contains callback function that is called when weather gets here from server --> 
-<script src="weather.js"></script>
+					</div>
+				<div id="stepper">
+					<button id="leftButton" onclick="stepAction('left')"><img src="img/arrow-left.png"></button>
+					<button id="rightButton" onclick="stepAction('right')"><img src="img/arrow-right.png"></button>
+				</div>
 
-<!-- asks server to send weather -->
-<script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='davis, ca')&format=json&callback=callbackFunction"></script>
+			</div>
 
-</body>
+
+
+		</div>
+
+
+
+
+
+
+
+
+
+
+		<!-- contains callback function that is called when weather gets here from server -->
+		<script src="weather.js"></script>
+		<script src="https://query.yahooapis.com/v1/public/yql?q=select * from weather.forecast where woeid in (select woeid from geo.places(1) where text='davis, ca')&format=json&callback=callbackFunction"></script>
+
+		<!-- asks server to send weather -->
+
+	</body>
 </html>

@@ -1,0 +1,30 @@
+#stepper{
+    display: flex;
+}
+#weatherBox{
+    display: block;
+    height: 600px;
+}
+.forecastBox{
+    display: flex;
+    border: solid 1px;
+    justify-content: space-around;
+    flex-direction: row;
+    height: 250px;
+}
+.forecast{
+    border: transparent 1px;
+    background-color: azure;
+    padding: 10px;
+    border-radius: 15%;
+    margin: 20px;
+    width: 25%;
+
+}
+
+#forecast5, #forecast6, #forecast7, #forecast8, #forecast9{
+    display: none;
+}
+#rightButton{
+    flex-direction: row-reverse;
+}
